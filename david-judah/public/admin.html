@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+    <script id="author-stats-template" type="text/x-handlebars-template">
+      <li><b>{{author}}</b>: {{totalWords}} words written</li>
+    </script>
   </head>
   <body>
     <header class="site-header clearfix">
@@ -48,7 +51,7 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      Article.fetchAll();
+      Article.fetchAll(articleView.initAdminPage);
     </script>
   </body>
 </html>

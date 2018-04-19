@@ -10,7 +10,19 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
+
+    <script id="article-template" type="text/x-handlebars-template">
+      <article class="clearfix" data-author="{{author}}" data-category="{{category}}">
+        <header>
+          <h1>{{title}}</h1>
+          <div class="byline">
+            Author <address><a href="{{authorUrl}}">{{author}}</a></address> wrote {{totalWords}} words.
+          </div>
+        </header>
+      </article>
+    </script>
   </head>
+
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1 pull-left">
@@ -48,7 +60,7 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      Article.fetchAll();
+      app.Article.fetchAll(app.articleView.initAdminPage);
     </script>
   </body>
 </html>

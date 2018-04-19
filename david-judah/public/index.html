@@ -21,9 +21,6 @@
             {{publishStatus}}
           </div>
         </header>
-        <section class="article-body">{{{body}}}</section>
-        <a href="#" class="read-on">Read on &rarr;</a>
-      </article>
     </script>
   </head>
   <body>
@@ -86,7 +83,7 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      Article.fetchAll(articleView.initIndexPage);
+      app.Article.fetchAll(app.articleView.initIndexPage);
     </script>
   </body>
 </html>
